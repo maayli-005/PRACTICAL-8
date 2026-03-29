@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Harry Potter Image Gallery</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family: Arial;
+background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+color:white;
+text-align:center;
+padding:20px;
+}
+
+h1{
+margin-bottom:30px;
+font-size:40px;
+color:gold;
+}
+
+.navbar{
+background:black;
+padding:10px;
+margin-bottom:30px;
+border-radius:10px;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+margin:15px;
+font-size:18px;
+}
+
+.navbar a:hover{
+color:gold;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+position:relative;
+overflow:hidden;
+border-radius:15px;
+border:2px solid gold;
+}
+
+.card img{
+width:100%;
+height:250px;
+object-fit:contain;
+background:black;
+border-radius:15px;
+transition:0.5s;
+}
+
+.overlay{
+position:absolute;
+bottom:0;
+width:100%;
+background:rgba(0,0,0,0.7);
+padding:10px;
+opacity:0;
+transition:0.5s;
+}
+
+.card:hover img{
+transform:scale(1.1);
+filter:brightness(70%);
+}
+
+.card:hover .overlay{
+opacity:1;
+}
+
+.card:hover{
+box-shadow:0 0 20px gold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>✨ Harry Potter Image Gallery ✨</h1>
+
+<div class="navbar">
+<a href="#">Home</a>
+<a href="#">Gallery</a>
+<a href="#">Characters</a>
+<a href="#">About</a>
+</div>
+
+<div class="gallery">
+
+<div class="card">
+<img src="./img1.jpeg">
+<div class="overlay">Golden Trio</div>
+</div>
+
+<div class="card">
+<img src="img2.jpeg" alt="Hogwarts Heroes">
+<div class="overlay">Hogwarts Heroes</div>
+</div>
+
+<div class="card">
+<img src="img3.jpeg" alt="Wizarding World>
+<div class="overlay">Wizarding World</div>
+</div>
+
+<div class="card">
+<img src="img4.jpeg" alt="Hogwarts Express>
+<div class="overlay">Hogwarts Express</div>
+</div>
+
+</div>
+
+</body>
+</html>
